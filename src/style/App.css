@@ -1,0 +1,68 @@
+.container {
+  background-color: rgba(43, 109, 250, 0.836);
+  border-bottom-right-radius: 50%;
+  height: 170px;
+}
+.main-title {
+  font-weight: bold;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color: white;
+  font-size: 40px;
+}
+.subtitle {
+  font-weight: 50;
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-style: normal;
+  color: white;
+}
+.vector {
+  position: absolute;
+  top: 60px;
+  left: 140px;
+  z-index: 2;
+  border-radius: 40%;
+}
+.plus {
+  position: absolute;
+  top: 175px;
+  width: 40px;
+  height: 40px;
+  left: 10px;
+}
+.add-text {
+  position: absolute;
+  top: 180px;
+  left: 60px;
+  color: rgba(43, 109, 250, 0.836);
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-size: 20px;
+}
+.today {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color: grey;
+  font-size: 25px;
+  position: absolute;
+  top: 220px;
+  left: 20px;
+}
+.week {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color: grey;
+  font-size: 25px;
+  position: absolute;
+  top: 220px;
+  left: 100px;
+}
+.month {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color: grey;
+  font-size: 25px;
+  position: absolute;
+  top: 220px;
+  left: 180px;
+}
