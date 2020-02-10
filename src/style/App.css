@@ -66,3 +66,15 @@
   top: 220px;
   left: 180px;
 }
+.todoList{
+  position: absolute;
+  top: 270px;
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color: black;
+  font-size: 25px;
+  left: 20px;
+  border: white;
+  box-shadow: 5px 5px 5px #aaaaaa;
+  width: 330px;
+}
