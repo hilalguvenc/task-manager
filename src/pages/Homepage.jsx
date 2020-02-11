@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import vector1 from "../style/vector1.jpg";
 import { Link } from "react-router-dom";
+import AddNewTask from "./AddNewTask";
 
 const Homepage = () => {
   const [todoItems, settodoItems] = useState([
     { action: "Prepare an exam", done: false }
   ]);
+
+  const [newItemText, setNewItemText] = useState("");
 
   const todoList = () =>
     todoItems.map(item => (
@@ -13,6 +16,19 @@ const Homepage = () => {
         <div>{item.action}</div>
       </div>
     ));
+
+  const updateNewTextValue = event => {
+    setNewItemText({ newItemText: event.target.value });
+  };
+
+  const createNewTask = () => {
+    if (!todoItems.find(item => item.action === newItemText)) {
+      setNewItemText({
+        todoItems: [...todoItems, { action: newItemText, done: false }],
+        newItemText: ""
+      });
+    }
+  };
 
   return (
     <div>

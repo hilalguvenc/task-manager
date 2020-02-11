@@ -1,12 +1,12 @@
 import React, { Fragment } from "react";
-import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import "./style/App.css";
 import Homapage from "./pages/Homepage";
 import Week from "./pages/Week";
 import Month from "./pages/Month";
 import AddNewTask from "./pages/AddNewTask";
 
-const App =()=>  {
+const App = () => {
   return (
     <Fragment>
       <Router>
@@ -27,6 +27,6 @@ const App =()=>  {
       </Router>
     </Fragment>
   );
-}
+};
 
 export default App;

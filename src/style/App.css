@@ -66,7 +66,7 @@
   top: 220px;
   left: 180px;
 }
-.todoList{
+.todoList {
   position: absolute;
   top: 270px;
   font-family: "Times New Roman", Times, serif;
@@ -80,7 +80,7 @@
   height: 40px;
   text-align: start;
 }
-input[type=text] {
+input[type="text"] {
   position: absolute;
   left: 10px;
   top: 150px;
@@ -91,7 +91,7 @@ input[type=text] {
   border: none;
   border-bottom: 2px solid rgba(43, 109, 250, 0.836);
 }
-input[type=text1] {
+input[type="text1"] {
   position: absolute;
   left: 10px;
   top: 250px;
@@ -102,7 +102,7 @@ input[type=text1] {
   border: none;
   border-bottom: 2px solid rgba(43, 109, 250, 0.836);
 }
-input[type=text2] {
+input[type="text2"] {
   position: absolute;
   left: 10px;
   top: 350px;
@@ -113,7 +113,7 @@ input[type=text2] {
   border: none;
   border-bottom: 2px solid rgba(43, 109, 250, 0.836);
 }
-.content-done{
+.content-done {
   position: absolute;
   top: 130px;
   left: 10px;
@@ -122,11 +122,10 @@ input[type=text2] {
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
-
 }
-.content-date{
+.content-date {
   position: absolute;
-  top:230px;
+  top: 230px;
   left: 10px;
   color: rgba(43, 109, 250, 0.836);
   font-family: "Times New Roman", Times, serif;
@@ -134,57 +133,57 @@ input[type=text2] {
   font-weight: bold;
   font-size: 20px;
 }
-.calendar{
+.calendar {
   position: absolute;
   width: 45px;
   height: 45px;
   left: 310px;
   top: 260px;
 }
-.clock{
+.clock {
   position: absolute;
   width: 45px;
   height: 45px;
   left: 310px;
   top: 360px;
 }
-.back-container{
-  border:rgba(43, 109, 250, 0.836) ;
+.back-container {
+  border: rgba(43, 109, 250, 0.836);
   width: 375px;
   height: 50px;
   padding: 20px;
-  background-color:rgba(43, 109, 250, 0.836) ;
+  background-color: rgba(43, 109, 250, 0.836);
 }
-.back-arrow{
+.back-arrow {
   position: absolute;
   width: 60px;
   height: 50px;
   left: 6px;
   top: 0px;
 }
-.month-plus{
+.month-plus {
   position: absolute;
   width: 80px;
   height: 80px;
   left: 150px;
   top: 550px;
 }
-.week-plus{
+.week-plus {
   position: absolute;
   width: 80px;
   height: 80px;
   left: 150px;
   top: 550px;
 }
-.calendar-container{
-   position: absolute;
-   width: 300px;
-   height: 420px;
-   z-index: 1;
-   left: 10px;
-   top: 130px;
+.calendar-container {
+  position: absolute;
+  width: 300px;
+  height: 420px;
+  z-index: 1;
+  left: 10px;
+  top: 130px;
 }
-.calendar-close-popup{
+.calendar-close-popup {
   position: absolute;
   width: 30px;
   height: 30px;
@@ -192,7 +191,7 @@ input[type=text2] {
   left: 170px;
   top: 430px;
   color: antiquewhite;
-  background-color:rgba(43, 109, 250, 0.836) ;
+  background-color: rgba(43, 109, 250, 0.836);
 }
 ul {
   list-style: none;
@@ -202,7 +201,14 @@ ul li::before {
   content: "\2022";
   color: rgb(13, 180, 13);
   font-weight: bold;
-  display: inline-block; 
+  display: inline-block;
   position: absolute;
   left: -15px;
+}
+.done {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  top: 470px;
+  left: 160px;
 }

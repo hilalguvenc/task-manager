@@ -6,7 +6,7 @@ import CalendarPopup from "../popup/CalendarPopup";
 
 function AddNewTask() {
   const [calendarPopupOpen, setCalendarPopupOpen] = useState(false);
-
+  
   const onCalendarPopupClose = () => {
     setCalendarPopupOpen(false);
   };
@@ -18,7 +18,7 @@ function AddNewTask() {
         </Link>
       </div>
       <form>
-        <label className="content-done">What is be done?</label>
+        <label className="content-done">What is to be done?</label>
         <input type="text" />
         <label className="content-date">Due date</label>
         <input type="text1" />
@@ -37,6 +37,7 @@ function AddNewTask() {
           alt=""
         />
       </form>
+      <img className="done" src={`https://img.icons8.com/nolan/64/ok.png`}/>
       {calendarPopupOpen && <CalendarPopup onClose={onCalendarPopupClose} />}
     </div>
   );
