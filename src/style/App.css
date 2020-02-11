@@ -48,7 +48,7 @@
 }
 .todoList {
   position: absolute;
-  top: 270px;
+  top: 300px;
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   color: black;
@@ -133,6 +133,8 @@ input[type="text2"] {
   height: 50px;
   padding: 20px;
   background-color: rgba(43, 109, 250, 0.836);
+  position: absolute;
+  top: 0px;
 }
 .back-arrow {
   position: absolute;
@@ -173,7 +175,7 @@ input[type="text2"] {
   color: antiquewhite;
   background-color: rgba(43, 109, 250, 0.836);
 }
-ul {
+/* ul {
   list-style: none;
 }
 
@@ -184,7 +186,7 @@ ul li::before {
   display: inline-block;
   position: absolute;
   left: -15px;
-}
+} */
 .done {
   position: absolute;
   width: 70px;
@@ -199,7 +201,16 @@ ul li::before {
   font-size: 25px;
   position: relative;
   top: 220px;
-  left: 0px;
-  display: inline;
-  display: inline-block;
+  right: 30px;
 }
+.tab-panel1{
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color: grey;
+  font-size: 25px;
+  position: relative;
+  top: 270px;
+  left: 0px;
+}
+
+
