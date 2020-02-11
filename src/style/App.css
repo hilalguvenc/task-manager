@@ -72,9 +72,137 @@
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   color: black;
-  font-size: 25px;
-  left: 20px;
+  font-size: 22px;
+  left: 30px;
   border: white;
-  box-shadow: 5px 5px 5px #aaaaaa;
-  width: 330px;
+  box-shadow: 2px 2px 2px #aaaaaa;
+  width: 335px;
+  height: 40px;
+  text-align: start;
+}
+input[type=text] {
+  position: absolute;
+  left: 10px;
+  top: 150px;
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgba(43, 109, 250, 0.836);
+}
+input[type=text1] {
+  position: absolute;
+  left: 10px;
+  top: 250px;
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgba(43, 109, 250, 0.836);
+}
+input[type=text2] {
+  position: absolute;
+  left: 10px;
+  top: 350px;
+  width: 300px;
+  padding: 12px 20px;
+  margin: 8px 0;
+  box-sizing: border-box;
+  border: none;
+  border-bottom: 2px solid rgba(43, 109, 250, 0.836);
+}
+.content-done{
+  position: absolute;
+  top: 130px;
+  left: 10px;
+  color: rgba(43, 109, 250, 0.836);
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+
+}
+.content-date{
+  position: absolute;
+  top:230px;
+  left: 10px;
+  color: rgba(43, 109, 250, 0.836);
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+}
+.calendar{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 310px;
+  top: 260px;
+}
+.clock{
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  left: 310px;
+  top: 360px;
+}
+.back-container{
+  border:rgba(43, 109, 250, 0.836) ;
+  width: 375px;
+  height: 50px;
+  padding: 20px;
+  background-color:rgba(43, 109, 250, 0.836) ;
+}
+.back-arrow{
+  position: absolute;
+  width: 60px;
+  height: 50px;
+  left: 6px;
+  top: 0px;
+}
+.month-plus{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 150px;
+  top: 550px;
+}
+.week-plus{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 150px;
+  top: 550px;
+}
+.calendar-container{
+   position: absolute;
+   width: 300px;
+   height: 420px;
+   z-index: 1;
+   left: 10px;
+   top: 130px;
+}
+.calendar-close-popup{
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  z-index: 1;
+  left: 170px;
+  top: 430px;
+  color: antiquewhite;
+  background-color:rgba(43, 109, 250, 0.836) ;
+}
+ul {
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022";
+  color: rgb(13, 180, 13);
+  font-weight: bold;
+  display: inline-block; 
+  position: absolute;
+  left: -15px;
 }
