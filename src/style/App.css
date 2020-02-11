@@ -1,7 +1,9 @@
 .container {
   background-color: rgba(43, 109, 250, 0.836);
   border-bottom-right-radius: 50%;
+  position: absolute;
   height: 170px;
+  top: 0px;
 }
 .main-title {
   font-weight: bold;
@@ -9,12 +11,17 @@
   font-style: normal;
   color: white;
   font-size: 40px;
+  position: absolute;
+  top: 30px;
 }
 .subtitle {
   font-weight: 50;
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-style: normal;
   color: white;
+  font-size: 25px;
+  position: absolute;
+  top: 90px;
 }
 .vector {
   position: absolute;
