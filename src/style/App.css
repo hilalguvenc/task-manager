@@ -39,33 +39,6 @@
   font-style: normal;
   font-size: 20px;
 }
-.today {
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  color: grey;
-  font-size: 25px;
-  position: absolute;
-  top: 220px;
-  left: 20px;
-}
-.week {
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  color: grey;
-  font-size: 25px;
-  position: absolute;
-  top: 220px;
-  left: 100px;
-}
-.month {
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  color: grey;
-  font-size: 25px;
-  position: absolute;
-  top: 220px;
-  left: 180px;
-}
 .todoList {
   position: absolute;
   top: 270px;
@@ -211,4 +184,15 @@ ul li::before {
   height: 70px;
   top: 470px;
   left: 160px;
+}
+.tab-list {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color: grey;
+  font-size: 25px;
+  position: relative;
+  top: 220px;
+  left: 0px;
+  display: inline;
+  display: inline-block;
 }

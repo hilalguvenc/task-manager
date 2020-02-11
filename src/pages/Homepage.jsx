@@ -48,13 +48,7 @@ const Homepage = () => {
           <p className="add-text">Add New Task</p>
         </Link>
       </div>
-      <div className="today">Today</div>
-      <Link to="/week">
-        <div className="week">Week</div>
-      </Link>
-      <Link to="/month">
-        <div className="month">Month</div>
-      </Link>
+      
       <ul>
         <li className="todoList">{todoList()} </li>
       </ul>
