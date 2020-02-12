@@ -20,26 +20,28 @@ const Homepage = () => {
     setNewTaskPopupOpen(false);
   };
 
-  const checkTodoItem = (action, tab) => {
+  const checkTodoItem = (target, tab) => {
+    const action = target.value;
+    const checked = target.checked;
     let updatedItems;
     switch (tab) {
       case tabs.today:
         updatedItems = todayTodoItems.map(item => {
-          if (item.action === action) item.done = true;
+          if (item.action === action) item.done = checked;
           return item;
         });
         setTodayTodoItems([...updatedItems]);
         break;
       case tabs.week:
         updatedItems = weekTodoItems.map(item => {
-          if (item.action === action) item.done = true;
+          if (item.action === action) item.done = checked;
           return item;
         });
         setWeekTodoItems([...updatedItems]);
         break;
       case tabs.month:
         updatedItems = monthTodoItems.map(item => {
-          if (item.action === action) item.done = true;
+          if (item.action === action) item.done = checked;
           return item;
         });
         setMonthTodoItems([...updatedItems]);
@@ -59,6 +61,22 @@ const Homepage = () => {
     }
   };
 
+  const renderItem = (item, tab) => (
+    <div key={item.action}>
+      <input className={item.done ? "checked" : "do"}
+        value={item.action}
+        type="checkbox"
+        checked={item.done}
+        onChange={e => checkTodoItem(e.target, tab)}
+      />
+      <div className={item.done ? "checked-container content": "content"}>
+        <ul>
+          <li className="action-item">{item.action}</li>
+        </ul>
+      </div>
+    </div>
+  )
+
   const [selectedTab, setSelectedTab] = useState(tabs.today);
 
   return (
@@ -76,46 +94,19 @@ const Homepage = () => {
           </Tab>
         </TabList>
 
-        <TabPanel className="tab-panel1">
+        <TabPanel>
           <h2>
-            {todayTodoItems.map(item => (
-              <div className={item.done ? "checked" : ""} key={item.action}>
-                <input
-                  value={item.action}
-                  type="checkbox"
-                  onChange={e => checkTodoItem(e.target.value, tabs.today)}
-                />
-                <div> {item.action}</div>
-              </div>
-            ))}
+            {todayTodoItems.map(item => renderItem(item, tabs.today))}
           </h2>
         </TabPanel>
-        <TabPanel className="tab-panel2">
+        <TabPanel>
           <h2>
-            {weekTodoItems.map(item => (
-              <div className={item.done ? "checked" : ""} key={item.action}>
-                <input
-                  value={item.action}
-                  type="checkbox"
-                  onChange={e => checkTodoItem(e.target.value, tabs.week)}
-                />
-                <div> {item.action}</div>
-              </div>
-            ))}
+            {weekTodoItems.map(item => renderItem(item, tabs.week))}
           </h2>
         </TabPanel>
-        <TabPanel className="tab-panel3">
+        <TabPanel>
           <h2>
-            {monthTodoItems.map(item => (
-              <div className={item.done ? "checked" : ""} key={item.action}>
-                <input
-                  value={item.action}
-                  type="checkbox"
-                  onChange={e => checkTodoItem(e.target.value, tabs.month)}
-                />
-                <div> {item.action}</div>
-              </div>
-            ))}
+            {monthTodoItems.map(item => renderItem(item, tabs.month))}
           </h2>
         </TabPanel>
       </Tabs>
@@ -136,13 +127,6 @@ const Homepage = () => {
           />
           <p className="add-text">Add New Task</p>
         </div>
-        {/* <ul>
-          <li
-            className="todoList"
-          >
-            {todoList()}{" "}
-          </li>
-        </ul> */}
       </div>
       {newtaskPopupOpen && (
         <NewTaskPopup onClose={onNewTaskPopupClose} onAdd={onNewTaskAdded} />

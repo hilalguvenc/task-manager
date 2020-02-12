@@ -42,20 +42,6 @@
   font-style: normal;
   font-size: 20px;
 }
-.todoList {
-  position: absolute;
-  top: 300px;
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  color: black;
-  font-size: 22px;
-  left: 30px;
-  border: white;
-  box-shadow: 2px 2px 2px #aaaaaa;
-  width: 335px;
-  height: 40px;
-  text-align: start;
-}
 input[type="text"] {
   position: absolute;
   left: 40px;
@@ -96,18 +82,18 @@ input[type="text"] {
   left: 10px;
   top: 4px;
 }
-/* ul {
+ul {
   list-style: none;
 }
 
-ul li::before {
+ul .action-item:before {
   content: "\2022";
   color: rgb(13, 180, 13);
   font-weight: bold;
   display: inline-block;
   position: absolute;
-  left: -15px;
-} */
+  left: 20px;
+}
 .done {
   position: absolute;
   width: 70px;
@@ -124,15 +110,6 @@ ul li::before {
   top: 230px;
   left: 17px;
 }
-.tab-panel1 {
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  color: grey;
-  font-size: 25px;
-  position: relative;
-  top: 270px;
-  left: 0px;
-}
 .newtask-container {
   position: absolute;
   width: 100%;
@@ -144,68 +121,92 @@ ul li::before {
   bottom: 0px;
   background-color: white;
 }
+.checked-container {
+  text-decoration: line-through;
+}
+.content {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color: black;
+  font-size: 25px;
+  position: relative;
+  top: 203px;
+  left: 10px;
+  border: white;
+  box-shadow: 2px 2px 2px #aaaaaa;
+  width: 365px;
+  height: 40px;
+  z-index: 0;
+}
+.checked {
+  z-index: 1;
+  top: 240px;
+  position: relative;
+  left: 340px;
+  width: 22px;
+  height: 22px;
+}
+.do {
+  z-index: 1;
+  top: 240px;
+  position: relative;
+  left: 340px;
+  width: 22px;
+  height: 22px;
+}
 
 @media only screen and (min-width: 600px) {
   .container {
     background-color: rgba(43, 109, 250, 0.836);
     border-bottom-right-radius: 50%;
+    border-bottom-left-radius: 50%;
     position: absolute;
     height: 210px;
     top: 0px;
-    width: 100%;
+    width: 200px;
+    left: 100px;
   }
   .main-title {
     font-weight: bold;
     font-family: "Times New Roman", Times, serif;
     font-style: normal;
     color: white;
-    font-size: 40px;
+    font-size: 50px;
     position: absolute;
     top: 30px;
+    left: 450px;
   }
   .subtitle {
     font-weight: 50;
     font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
     font-style: normal;
     color: white;
-    font-size: 25px;
+    font-size: 35px;
     position: absolute;
-    top: 90px;
+    top: 110px;
+    left: 450px;
   }
   .plus {
     position: absolute;
     top: 226px;
-    width: 40px;
-    height: 40px;
-    left: 10px;
+    width: 50px;
+    height: 50px;
+    left: 540px;
   }
   .add-text {
     position: absolute;
-    top: 230px;
-    left: 60px;
+    top: 226px;
+    left: 70px;
     color: rgba(43, 109, 250, 0.836);
     font-family: "Times New Roman", Times, serif;
     font-style: normal;
-    font-size: 20px;
-  }
-  .todoList {
-    position: absolute;
-    top: 400px;
-    font-family: "Times New Roman", Times, serif;
-    font-style: normal;
-    color: black;
-    font-size: 22px;
-    left: 30px;
-    border: white;
-    box-shadow: 2px 2px 2px #aaaaaa;
-    width: 335px;
-    height: 40px;
-    text-align: start;
+    font-size: 30px;
+    left: 590px;
   }
   input[type="text"] {
     position: absolute;
     left: 500px;
-    top: 150px;
+    top: 160px;
     width: 300px;
     padding: 12px 20px;
     margin: 8px 0;
@@ -217,7 +218,7 @@ ul li::before {
   .content-done {
     position: absolute;
     top: 130px;
-    left: 500px;
+    left: 550px;
     color: rgba(43, 109, 250, 0.836);
     font-family: "Times New Roman", Times, serif;
     font-style: normal;
@@ -240,19 +241,19 @@ ul li::before {
     left: 0px;
     top: 3px;
   }
-
-  /* ul {
+  ul {
     list-style: none;
   }
-  
-  ul li::before {
+
+  ul .action-item:before {
     content: "\2022";
     color: rgb(13, 180, 13);
     font-weight: bold;
     display: inline-block;
     position: absolute;
-    left: -15px;
-  } */
+    left: 10px;
+    top: 5px;
+  }
   .done {
     position: absolute;
     width: 70px;
@@ -264,9 +265,40 @@ ul li::before {
     font-family: "Times New Roman", Times, serif;
     font-style: normal;
     color: grey;
+    font-size: 30px;
+    position: relative;
+    top: 285px;
+    right: 40px;
+    left: 480px;
+  }
+  .content {
+    font-family: "Times New Roman", Times, serif;
+    font-style: normal;
+    color: black;
     font-size: 25px;
     position: relative;
-    top: 280px;
-    right: 30px;
+    top: 260px;
+    left: 450px;
+    border: white;
+    box-shadow: 2px 2px 2px #aaaaaa;
+    width: 435px;
+    height: 40px;
+  }
+
+  .do {
+    z-index: 1;
+    top: 300px;
+    position: relative;
+    left: 845px;
+    width: 26px;
+    height: 26px;
+  }
+  .checked {
+    z-index: 1;
+    top: 300px;
+    position: relative;
+    left: 845px;
+    width: 26px;
+    height: 26px;
   }
 }
