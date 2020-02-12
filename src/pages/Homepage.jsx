@@ -1,82 +1,148 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
 import "react-tabs/style/react-tabs.css";
-import AddNewTask from "./AddNewTask";
+import NewTaskPopup from "../popup/NewTaskPopup";
+
+const tabs = {
+  today: 1,
+  week: 2,
+  month: 3
+};
 
 const Homepage = () => {
-  const [todoItems, settodoItems] = useState([
-    { action: "Prepare an exam", done: false }
-  ]);
+  const [todayTodoItems, setTodayTodoItems] = useState([]);
+  const [weekTodoItems, setWeekTodoItems] = useState([]);
+  const [monthTodoItems, setMonthTodoItems] = useState([]);
 
-  const [today,setToday] = useState();
-  const [week,setWeek] = useState();
-  const [month, setMonth] = useState();
+  const [newtaskPopupOpen, setNewTaskPopupOpen] = useState(false);
 
-  const selectToday =()=>{
-    setToday(today);
-  }
-  const selectWeek =()=>{
-    setWeek(week);
-  }
-  const selectMonth =()=>{
-    setMonth(month);
+  const onNewTaskPopupClose = () => {
+    setNewTaskPopupOpen(false);
+  };
+
+  const checkTodoItem = (action, tab) => {
+    let updatedItems;
+    switch (tab) {
+      case tabs.today:
+        updatedItems = todayTodoItems.map(item => {
+          if (item.action === action)
+          item.done = true;
+          return item;
+        });
+        setTodayTodoItems([...updatedItems]);
+        break;
+      case tabs.week:
+        updatedItems = weekTodoItems.map(item => {
+          if (item.action === action)
+          item.done = true;
+          return item;
+        });
+        setWeekTodoItems([...updatedItems]);
+        break;
+      case tabs.month:
+        updatedItems = monthTodoItems.map(item => {
+          if (item.action === action)
+          item.done = true;
+          return item;
+        });
+        setMonthTodoItems([...updatedItems]);
+    }
   }
 
-  const todoList = () =>
-    todoItems.map(item => (
-      <div key={item.action}>
-        <div>{item.action}</div>
-      </div>
-    ));
+  const onNewTaskAdded = action => {
+    switch (selectedTab) {
+      case tabs.today:
+        setTodayTodoItems([...todayTodoItems, { action, done: false }]);
+        break;
+      case tabs.week:
+        setWeekTodoItems([...weekTodoItems, { action, done: false }]);
+        break;
+      case tabs.month:
+        setMonthTodoItems([...monthTodoItems, { action, done: false }]);
+    }
+  };
+
+  const [selectedTab, setSelectedTab] = useState(tabs.today);
 
   return (
     <div>
-    <Tabs>
-    <TabList className="tab-list">
-      <Tab onClick ={()=> selectToday} title="Today">
-        Today
-      </Tab>
-      <Tab onClick ={()=> selectWeek} title="Week">
-        Week
-      </Tab>
-      <Tab onClick ={()=> selectMonth} title="Month">
-        Month
-      </Tab>
-    </TabList>
+      <Tabs>
+        <TabList className="tab-list">
+          <Tab onClick={() => setSelectedTab(tabs.today)} title="Today">
+            Today
+          </Tab>
+          <Tab onClick={() => setSelectedTab(tabs.week)} title="Week">
+            Week
+          </Tab>
+          <Tab onClick={() => setSelectedTab(tabs.month)} title="Month">
+            Month
+          </Tab>
+        </TabList>
 
-    <TabPanel className="tab-panel1">
-      <h2>Any content 1</h2>
-    </TabPanel>
-    <TabPanel className="tab-panel1">
-      <h2>Any content 2</h2>
-    </TabPanel>
-    <TabPanel className="tab-panel1">
-      <h2>Any content 3</h2>
-    </TabPanel>
-  </Tabs>
-    <div>
-      <div className="container">
-        <div className="main-title">Let's Plan</div>
-        <div className="subtitle">My Schedule</div>
-        {/* <img className="vector" src={vector1} width="150px"
-          height="100px"  /> */}
-      </div>
+        <TabPanel className="tab-panel1">
+          <h2>
+            {todayTodoItems.map(item => (
+              <div className={item.done ? "checked" : ""} key={item.action}>
+                <input value={item.action} type="checkbox" onChange={(e) => checkTodoItem(e.target.value, tabs.today)} />
+                <div> {item.action}</div>
+              </div>
+            ))}
+          </h2>
+        </TabPanel>
+        <TabPanel className="tab-panel1">
+          <h2>
+            {weekTodoItems.map(item => (
+              <div className={item.done ? "checked" : ""} key={item.action}>
+              <input value={item.action} type="checkbox" onChange={(e) => checkTodoItem(e.target.value, tabs.week)} />
+              <div> {item.action}</div>
+            </div>
+            ))}
+            
+          </h2>
+        </TabPanel>
+        <TabPanel className="tab-panel1">
+          <h2>
+            {monthTodoItems.map(item => (
+              <div className={item.done ? "checked" : ""} key={item.action}>
+                <input value={item.action} type="checkbox" onChange={(e) => checkTodoItem(e.target.value, tabs.month)} />
+                <div> {item.action}</div>
+              </div>
+            ))}
+            
+          </h2>
+        </TabPanel>
+      </Tabs>
       <div>
-        <Link to="/addnewtask">
+        <div className="container">
+          <div className="main-title">Let's Plan</div>
+          <div className="subtitle">My Schedule</div>
+          {/* <img className="vector" src={vector1} width="150px"
+          height="100px"  /> */}
+        </div>
+        <div
+          onClick={() => {
+            setNewTaskPopupOpen(true);
+          }}
+        >
           <img
             className="plus"
             src="https://img.icons8.com/nolan/64/plus-math.png"
             alt=""
           />
           <p className="add-text">Add New Task</p>
-        </Link>
+        </div>
+
+        {/* <ul>
+          <li
+            className="todoList"
+          >
+            {todoList()}{" "}
+          </li>
+        </ul> */}
       </div>
-      
-      <ul>
-        <li className="todoList">{todoList()} </li>
-      </ul>
-    </div>
+      {newtaskPopupOpen && (
+        <NewTaskPopup onClose={onNewTaskPopupClose} onAdd={onNewTaskAdded} />
+      )}
     </div>
   );
 };
