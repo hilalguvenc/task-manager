@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import vector1 from "../style/vector1.jpg";
 import { Link } from "react-router-dom";
+import { Tab, Tabs, TabList, TabPanel } from "react-tabs";
+import "react-tabs/style/react-tabs.css";
 import AddNewTask from "./AddNewTask";
 
 const Homepage = () => {
@@ -8,7 +9,19 @@ const Homepage = () => {
     { action: "Prepare an exam", done: false }
   ]);
 
-  const [newItemText, setNewItemText] = useState("");
+  const [today,setToday] = useState();
+  const [week,setWeek] = useState();
+  const [month, setMonth] = useState();
+
+  const selectToday =()=>{
+    setToday(today);
+  }
+  const selectWeek =()=>{
+    setWeek(week);
+  }
+  const selectMonth =()=>{
+    setMonth(month);
+  }
 
   const todoList = () =>
     todoItems.map(item => (
@@ -17,20 +30,31 @@ const Homepage = () => {
       </div>
     ));
 
-  const updateNewTextValue = event => {
-    setNewItemText({ newItemText: event.target.value });
-  };
-
-  const createNewTask = () => {
-    if (!todoItems.find(item => item.action === newItemText)) {
-      setNewItemText({
-        todoItems: [...todoItems, { action: newItemText, done: false }],
-        newItemText: ""
-      });
-    }
-  };
-
   return (
+    <div>
+    <Tabs>
+    <TabList className="tab-list">
+      <Tab onClick ={()=> selectToday} title="Today">
+        Today
+      </Tab>
+      <Tab onClick ={()=> selectWeek} title="Week">
+        Week
+      </Tab>
+      <Tab onClick ={()=> selectMonth} title="Month">
+        Month
+      </Tab>
+    </TabList>
+
+    <TabPanel className="tab-panel1">
+      <h2>Any content 1</h2>
+    </TabPanel>
+    <TabPanel className="tab-panel1">
+      <h2>Any content 2</h2>
+    </TabPanel>
+    <TabPanel className="tab-panel1">
+      <h2>Any content 3</h2>
+    </TabPanel>
+  </Tabs>
     <div>
       <div className="container">
         <div className="main-title">Let's Plan</div>
@@ -52,6 +76,7 @@ const Homepage = () => {
       <ul>
         <li className="todoList">{todoList()} </li>
       </ul>
+    </div>
     </div>
   );
 };

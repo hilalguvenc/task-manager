@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import Calendar from "react-calendar";
+import AddNewTask from "../pages/AddNewTask";
 
 function CalendarPopup(props) {
   const [date, setDate] = useState(new Date());
@@ -7,6 +8,7 @@ function CalendarPopup(props) {
   const onChange = date => {
     setDate(date);
   };
+
   return (
     <div>
       <Calendar

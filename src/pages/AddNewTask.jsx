@@ -4,12 +4,13 @@ import { Link } from "react-router-dom";
 import Calendar from "react-calendar";
 import CalendarPopup from "../popup/CalendarPopup";
 
-function AddNewTask() {
+function AddNewTask(props) {
   const [calendarPopupOpen, setCalendarPopupOpen] = useState(false);
-  
+
   const onCalendarPopupClose = () => {
     setCalendarPopupOpen(false);
   };
+
   return (
     <div>
       <div className="back-container">
@@ -37,7 +38,7 @@ function AddNewTask() {
           alt=""
         />
       </form>
-      <img className="done" src={`https://img.icons8.com/nolan/64/ok.png`}/>
+      <img className="done" src={`https://img.icons8.com/nolan/64/ok.png`} />
       {calendarPopupOpen && <CalendarPopup onClose={onCalendarPopupClose} />}
     </div>
   );
