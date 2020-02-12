@@ -1,14 +1,12 @@
 import React, { useState } from "react";
 import backarrow from "../style/backarrow.png";
-import { Link } from "react-router-dom";
-import CalendarPopup from "../popup/CalendarPopup";
 
 function NewTaskPopup(props) {
-    const [todo, setTodo] = useState("");
-    const onClick = () => {
-        props.onAdd(todo);
-        props.onClose();
-    }
+  const [todo, setTodo] = useState("");
+  const onClick = () => {
+    props.onAdd(todo);
+    props.onClose();
+  };
   return (
     <div className="newtask-container">
       <div className="back-container" onClick={props.onClose}>
@@ -19,7 +17,10 @@ function NewTaskPopup(props) {
         <input type="text" onChange={e => setTodo(e.target.value)} />
       </form>
       <button onClick={onClick}>
-        <img className="done" src={`https://img.icons8.com/nolan/64/ok.png`} />
+        <img
+          className="done"
+          src={`https://image.flaticon.com/icons/svg/2089/2089711.svg`}
+        />
       </button>
     </div>
   );

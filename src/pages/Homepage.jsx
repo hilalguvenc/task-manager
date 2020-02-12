@@ -25,29 +25,26 @@ const Homepage = () => {
     switch (tab) {
       case tabs.today:
         updatedItems = todayTodoItems.map(item => {
-          if (item.action === action)
-          item.done = true;
+          if (item.action === action) item.done = true;
           return item;
         });
         setTodayTodoItems([...updatedItems]);
         break;
       case tabs.week:
         updatedItems = weekTodoItems.map(item => {
-          if (item.action === action)
-          item.done = true;
+          if (item.action === action) item.done = true;
           return item;
         });
         setWeekTodoItems([...updatedItems]);
         break;
       case tabs.month:
         updatedItems = monthTodoItems.map(item => {
-          if (item.action === action)
-          item.done = true;
+          if (item.action === action) item.done = true;
           return item;
         });
         setMonthTodoItems([...updatedItems]);
     }
-  }
+  };
 
   const onNewTaskAdded = action => {
     switch (selectedTab) {
@@ -83,32 +80,42 @@ const Homepage = () => {
           <h2>
             {todayTodoItems.map(item => (
               <div className={item.done ? "checked" : ""} key={item.action}>
-                <input value={item.action} type="checkbox" onChange={(e) => checkTodoItem(e.target.value, tabs.today)} />
+                <input
+                  value={item.action}
+                  type="checkbox"
+                  onChange={e => checkTodoItem(e.target.value, tabs.today)}
+                />
                 <div> {item.action}</div>
               </div>
             ))}
           </h2>
         </TabPanel>
-        <TabPanel className="tab-panel1">
+        <TabPanel className="tab-panel2">
           <h2>
             {weekTodoItems.map(item => (
               <div className={item.done ? "checked" : ""} key={item.action}>
-              <input value={item.action} type="checkbox" onChange={(e) => checkTodoItem(e.target.value, tabs.week)} />
-              <div> {item.action}</div>
-            </div>
-            ))}
-            
-          </h2>
-        </TabPanel>
-        <TabPanel className="tab-panel1">
-          <h2>
-            {monthTodoItems.map(item => (
-              <div className={item.done ? "checked" : ""} key={item.action}>
-                <input value={item.action} type="checkbox" onChange={(e) => checkTodoItem(e.target.value, tabs.month)} />
+                <input
+                  value={item.action}
+                  type="checkbox"
+                  onChange={e => checkTodoItem(e.target.value, tabs.week)}
+                />
                 <div> {item.action}</div>
               </div>
             ))}
-            
+          </h2>
+        </TabPanel>
+        <TabPanel className="tab-panel3">
+          <h2>
+            {monthTodoItems.map(item => (
+              <div className={item.done ? "checked" : ""} key={item.action}>
+                <input
+                  value={item.action}
+                  type="checkbox"
+                  onChange={e => checkTodoItem(e.target.value, tabs.month)}
+                />
+                <div> {item.action}</div>
+              </div>
+            ))}
           </h2>
         </TabPanel>
       </Tabs>
@@ -116,8 +123,6 @@ const Homepage = () => {
         <div className="container">
           <div className="main-title">Let's Plan</div>
           <div className="subtitle">My Schedule</div>
-          {/* <img className="vector" src={vector1} width="150px"
-          height="100px"  /> */}
         </div>
         <div
           onClick={() => {
@@ -131,7 +136,6 @@ const Homepage = () => {
           />
           <p className="add-text">Add New Task</p>
         </div>
-
         {/* <ul>
           <li
             className="todoList"

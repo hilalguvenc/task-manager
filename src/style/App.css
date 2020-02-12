@@ -26,20 +26,12 @@
   top: 90px;
   z-index: 0;
 }
-/* .vector {
-  position: absolute;
-  top: 60px;
-  left: 140px;
-  z-index: 2;
-  border-radius: 40%;
-} */
 .plus {
   position: absolute;
   top: 175px;
   width: 40px;
   height: 40px;
   left: 10px;
-  z-index: 0;
 }
 .add-text {
   position: absolute;
@@ -49,7 +41,6 @@
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-size: 20px;
-  z-index: 0;
 }
 .todoList {
   position: absolute;
@@ -64,82 +55,30 @@
   width: 335px;
   height: 40px;
   text-align: start;
-  z-index: 0;
 }
 input[type="text"] {
   position: absolute;
-  left: 10px;
-  top: 150px;
+  left: 40px;
+  top: 200px;
   width: 300px;
   padding: 12px 20px;
   margin: 8px 0;
   box-sizing: border-box;
   border: none;
   border-bottom: 2px solid rgba(43, 109, 250, 0.836);
-  z-index: 0;
-}
-input[type="text1"] {
-  position: absolute;
-  left: 10px;
-  top: 250px;
-  width: 300px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 2px solid rgba(43, 109, 250, 0.836);
-  z-index: 0;
-}
-input[type="text2"] {
-  position: absolute;
-  left: 10px;
-  top: 350px;
-  width: 300px;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-  border: none;
-  border-bottom: 2px solid rgba(43, 109, 250, 0.836);
-  z-index: 0;
+  font-size: 20px;
 }
 .content-done {
   position: absolute;
-  top: 130px;
-  left: 10px;
+  top: 180px;
+  left: 90px;
   color: rgba(43, 109, 250, 0.836);
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   font-weight: bold;
-  font-size: 20px;
-  z-index: 1;
+  font-size: 22px;
 }
-.content-date {
-  position: absolute;
-  top: 230px;
-  left: 10px;
-  color: rgba(43, 109, 250, 0.836);
-  font-family: "Times New Roman", Times, serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  z-index: 1;
-}
-.calendar {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 310px;
-  top: 260px;
-  z-index: 1;
-}
-.clock {
-  position: absolute;
-  width: 45px;
-  height: 45px;
-  left: 310px;
-  top: 360px;
-  z-index: 1;
-}
+
 .back-container {
   border: rgba(43, 109, 250, 0.836);
   width: 375px;
@@ -154,41 +93,8 @@ input[type="text2"] {
   position: absolute;
   width: 60px;
   height: 50px;
-  left: 50px;
-  top: 10px;
-  
-}
-.month-plus {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  left: 150px;
-  top: 550px;
-}
-.week-plus {
-  position: absolute;
-  width: 80px;
-  height: 80px;
-  left: 150px;
-  top: 550px;
-}
-.calendar-container {
-  position: absolute;
-  width: 300px;
-  height: 420px;
-  z-index: 1;
   left: 10px;
-  top: 130px;
-}
-.calendar-close-popup {
-  position: absolute;
-  width: 30px;
-  height: 30px;
-  z-index: 1;
-  left: 170px;
-  top: 430px;
-  color: antiquewhite;
-  background-color: rgba(43, 109, 250, 0.836);
+  top: 4px;
 }
 /* ul {
   list-style: none;
@@ -215,10 +121,10 @@ ul li::before {
   color: grey;
   font-size: 25px;
   position: relative;
-  top: 220px;
-  right: 30px;
+  top: 230px;
+  left: 17px;
 }
-.tab-panel1{
+.tab-panel1 {
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
   color: grey;
@@ -227,8 +133,8 @@ ul li::before {
   top: 270px;
   left: 0px;
 }
-.newtask-container{
-  position:absolute;
+.newtask-container {
+  position: absolute;
   width: 100%;
   height: 100%;
   z-index: 1;
@@ -266,13 +172,6 @@ ul li::before {
     position: absolute;
     top: 90px;
   }
-  .vector {
-    position: absolute;
-    top: 60px;
-    left: 140px;
-    z-index: 2;
-    border-radius: 40%;
-  }
   .plus {
     position: absolute;
     top: 226px;
@@ -282,7 +181,7 @@ ul li::before {
   }
   .add-text {
     position: absolute;
-    top:230px;
+    top: 230px;
     left: 60px;
     color: rgba(43, 109, 250, 0.836);
     font-family: "Times New Roman", Times, serif;
@@ -314,28 +213,7 @@ ul li::before {
     border: none;
     border-bottom: 2px solid rgba(43, 109, 250, 0.836);
   }
-  input[type="text1"] {
-    position: absolute;
-    left: 500px;
-    top: 250px;
-    width: 300px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 2px solid rgba(43, 109, 250, 0.836);
-  }
-  input[type="text2"] {
-    position: absolute;
-    left: 500px;
-    top: 350px;
-    width: 300px;
-    padding: 12px 20px;
-    margin: 8px 0;
-    box-sizing: border-box;
-    border: none;
-    border-bottom: 2px solid rgba(43, 109, 250, 0.836);
-  }
+
   .content-done {
     position: absolute;
     top: 130px;
@@ -345,30 +223,6 @@ ul li::before {
     font-style: normal;
     font-weight: bold;
     font-size: 20px;
-  }
-  .content-date {
-    position: absolute;
-    top: 230px;
-    left: 500px;
-    color: rgba(43, 109, 250, 0.836);
-    font-family: "Times New Roman", Times, serif;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 20px;
-  }
-  .calendar {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    left: 800px;
-    top: 260px;
-  }
-  .clock {
-    position: absolute;
-    width: 45px;
-    height: 45px;
-    left:800px;
-    top: 360px;
   }
   .back-container {
     border: rgba(43, 109, 250, 0.836);
@@ -383,41 +237,10 @@ ul li::before {
     position: absolute;
     width: 90px;
     height: 70px;
-    left: 6px;
-    top:8px;
+    left: 0px;
+    top: 3px;
   }
-  .month-plus {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    left: 150px;
-    top: 550px;
-  }
-  .week-plus {
-    position: absolute;
-    width: 80px;
-    height: 80px;
-    left: 150px;
-    top: 550px;
-  }
-  .calendar-container {
-    position: absolute;
-    width: 300px;
-    height: 420px;
-    z-index: 1;
-    left: 10px;
-    top: 130px;
-  }
-  .calendar-close-popup {
-    position: absolute;
-    width: 30px;
-    height: 30px;
-    z-index: 1;
-    left: 170px;
-    top: 480px;
-    color: antiquewhite;
-    background-color: rgba(43, 109, 250, 0.836);
-  }
+
   /* ul {
     list-style: none;
   }
@@ -446,19 +269,4 @@ ul li::before {
     top: 280px;
     right: 30px;
   }
-  .tab-panel1{
-    font-family: "Times New Roman", Times, serif;
-    font-style: normal;
-    color: grey;
-    font-size: 25px;
-    position: relative;
-    top: 270px;
-    left: 0px;
-  }
-
-
 }
-
-
-
-
