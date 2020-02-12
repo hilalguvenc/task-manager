@@ -108,7 +108,7 @@ ul .action-item:before {
   font-size: 25px;
   position: relative;
   top: 230px;
-  left: 17px;
+  left: -30px;
 }
 .newtask-container {
   position: absolute;

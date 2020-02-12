@@ -63,19 +63,20 @@ const Homepage = () => {
 
   const renderItem = (item, tab) => (
     <div key={item.action}>
-      <input className={item.done ? "checked" : "do"}
+      <input
+        className={item.done ? "checked" : "do"}
         value={item.action}
         type="checkbox"
         checked={item.done}
         onChange={e => checkTodoItem(e.target, tab)}
       />
-      <div className={item.done ? "checked-container content": "content"}>
+      <div className={item.done ? "checked-container content" : "content"}>
         <ul>
           <li className="action-item">{item.action}</li>
         </ul>
       </div>
     </div>
-  )
+  );
 
   const [selectedTab, setSelectedTab] = useState(tabs.today);
 
@@ -95,19 +96,13 @@ const Homepage = () => {
         </TabList>
 
         <TabPanel>
-          <h2>
-            {todayTodoItems.map(item => renderItem(item, tabs.today))}
-          </h2>
+          <h2>{todayTodoItems.map(item => renderItem(item, tabs.today))}</h2>
         </TabPanel>
         <TabPanel>
-          <h2>
-            {weekTodoItems.map(item => renderItem(item, tabs.week))}
-          </h2>
+          <h2>{weekTodoItems.map(item => renderItem(item, tabs.week))}</h2>
         </TabPanel>
         <TabPanel>
-          <h2>
-            {monthTodoItems.map(item => renderItem(item, tabs.month))}
-          </h2>
+          <h2>{monthTodoItems.map(item => renderItem(item, tabs.month))}</h2>
         </TabPanel>
       </Tabs>
       <div>
