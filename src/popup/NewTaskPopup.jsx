@@ -16,9 +16,8 @@ function NewTaskPopup(props) {
         <label className="content-done">What is to be done?</label>
         <input type="text" onChange={e => setTodo(e.target.value)} />
       </form>
-      <button onClick={onClick}>
-        <img
-          className="done"
+      <button  className="done-btn" onClick={onClick}>
+        <img className="done"
           src={`https://image.flaticon.com/icons/svg/2089/2089711.svg`}
         />
       </button>

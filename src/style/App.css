@@ -43,8 +43,8 @@
   font-size: 20px;
 }
 input[type="text"] {
-  position: absolute;
-  left: 30px;
+  position: relative;
+  left: 37px;
   top: 200px;
   width: 300px;
   padding: 12px 20px;
@@ -57,7 +57,7 @@ input[type="text"] {
 .content-done {
   position: absolute;
   top: 180px;
-  left: 72px;
+  left: 94px;
   text-align: center;
   color: rgba(43, 109, 250, 0.836);
   font-family: "Times New Roman", Times, serif;
@@ -68,7 +68,7 @@ input[type="text"] {
 
 .back-container {
   border: rgba(43, 109, 250, 0.836);
-  width: 375px;
+  width: 100vw;
   height: 50px;
   padding: 20px;
   background-color: rgba(43, 109, 250, 0.836);
@@ -100,7 +100,14 @@ ul .action-item:before {
   width: 70px;
   height: 70px;
   top: 440px;
-  left: 150px;
+  left: 130px;
+}
+.done-btn{
+  position: absolute;
+  top: 20px;
+  left: 30px;
+  background-color: white;
+  border: none;
 }
 .tab-list {
   font-family: "Times New Roman", Times, serif;
