@@ -1,7 +1,7 @@
 .container {
   background-color: rgba(43, 109, 250, 0.836);
   border-bottom-right-radius: 50%;
-  position: absolute;
+  position: fixed;
   height: 170px;
   top: 0px;
   z-index: 0;
@@ -44,7 +44,7 @@
 }
 input[type="text"] {
   position: absolute;
-  left: 40px;
+  left: 30px;
   top: 200px;
   width: 300px;
   padding: 12px 20px;
@@ -57,7 +57,8 @@ input[type="text"] {
 .content-done {
   position: absolute;
   top: 180px;
-  left: 90px;
+  left: 72px;
+  text-align: center;
   color: rgba(43, 109, 250, 0.836);
   font-family: "Times New Roman", Times, serif;
   font-style: normal;
@@ -71,7 +72,7 @@ input[type="text"] {
   height: 50px;
   padding: 20px;
   background-color: rgba(43, 109, 250, 0.836);
-  position: absolute;
+  position: fixed;
   top: 0px;
   z-index: 1;
 }
@@ -79,7 +80,7 @@ input[type="text"] {
   position: absolute;
   width: 60px;
   height: 50px;
-  left: 10px;
+  left: 7px;
   top: 4px;
 }
 ul {
@@ -98,8 +99,8 @@ ul .action-item:before {
   position: absolute;
   width: 70px;
   height: 70px;
-  top: 470px;
-  left: 160px;
+  top: 440px;
+  left: 150px;
 }
 .tab-list {
   font-family: "Times New Roman", Times, serif;
